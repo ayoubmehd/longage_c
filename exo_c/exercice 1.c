@@ -3,43 +3,48 @@
 
 int main() {
 	
-	int i, j, n;
+	int i, j, k, n, nbEtoil, premier;
+		
+		
+	printf("Enter un nombre entier: ");
+	scanf("%d", &n);
 	
-	int exit = 0;
-	char charExit;
+	system("cls");
 	
-	while (exit == 0) {
-		
-		
-		printf("Enter un nombre entier: ");
-		scanf("%d", &n);
-		
-		system("cls");
-		
 
+	
+	
+	for (i = 1; i <= n; i++) {
 		
+		nbEtoil = 2*i - 1;
 		
-		for (i = 1; i <= n; i++) {
-			
+		premier = 1;
+		
+		for (k = 2; k <= nbEtoil / 2; k++) {
+			if (nbEtoil % k == 0) {
+				premier = 0;
+				break;
+			}
+		}
+		
+		if (premier == 1) {
 			for (j = n - i; j > 0; j--) {
 				
 				printf(" ");
 				
 			}
-			
 			for (j = 1; j <= 2*i - 1; j++) {
 				
 				printf("*");
 				
 			}
 			
-			printf("\n");
-			
+			printf("%d\n", nbEtoil);
 		}
 		
-		getchar();
 		
 	}
+		
 	
 	
 	return 0;
