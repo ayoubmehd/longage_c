@@ -16,7 +16,7 @@ int main() {
 	
 	for (i = 1; i <= n; i++) {
 		
-		nbEtoil = 2*i - 1;
+	/*	nbEtoil = 2*i - 1;
 		
 		premier = 1;
 		
@@ -28,6 +28,7 @@ int main() {
 		}
 		
 		if (premier == 1) {
+	*/
 			for (j = n - i; j > 0; j--) {
 				
 				printf(" ");
@@ -39,10 +40,10 @@ int main() {
 				
 			}
 			
-			printf("%d\n", nbEtoil);
-		}
+			printf("\n");
+	/*	}
 		
-		
+		*/
 	}
 		
 	
